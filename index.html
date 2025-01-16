@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoneZN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item h3 {
+            margin: 0;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ZoneZN</h1>
+        <p>Explora nuestra colección de zapatillas urbanas</p>
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            <!-- Example of a shoe item -->
+            <div class="gallery-item">
+                <img src="example-shoe1.jpg" alt="Shoe 1">
+                <h3>Modelo 1</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="example-shoe2.jpg" alt="Shoe 2">
+                <h3>Modelo 2</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="example-shoe3.jpg" alt="Shoe 3">
+                <h3>Modelo 3</h3>
+            </div>
+            <!-- Add more items here -->
+        </div>
+    </div>
+</body>
+</html>
