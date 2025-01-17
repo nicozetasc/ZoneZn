@@ -9,18 +9,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
             background-color: #000;
             color: #fff;
+            overflow-x: hidden;
+        }
+        header {
             text-align: center;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
         }
         header img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
         }
         .categories {
             display: flex;
@@ -41,37 +45,11 @@
         .category:hover {
             background-color: #444;
         }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .nike-section {
-            display: none;
-        }
-        .nike-section.active {
-            display: block;
-        }
-        .nike-section h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .nike-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .nike-section ul li {
-            margin-bottom: 8px;
-            font-size: 1em;
-        }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://raw.githubusercontent.com/nicozetasc/ZoneZn/refs/heads/main/DALL%C2%B7E%202025-01-15%2021.14.27%20-%20A%20modern%20and%20elegant%20logo%20design%20for%20an%20urban%20clothing%20and%20sneaker%20store%20called%20'ZoneZN'.%20The%20logo%20features%20bold%20typography%20with%20the%20complete%20letters%20.webp" alt="ZoneZN Logo" style="max-width: 50px; height: auto; margin: 0 auto; display: block;">
+        <img src="https://raw.githubusercontent.com/nicozetasc/ZoneZn/main/nombre-del-archivo.webp" alt="ZoneZN Logo">
     </header>
 
     <div class="categories">
@@ -81,53 +59,12 @@
         <a href="#" class="category" onclick="showSection('adidas')">Adidas</a>
     </div>
 
-    <div class="container">
-        <!-- Sección Nike -->
-        <div id="nike" class="nike-section">
-            <h2>Nike</h2>
-            <ul>
-                <li>DIÉSEL X1</li>
-                <li>Pegasus aéreo 2K5</li>
-                <li>Nike Motiva</li>
-                <li>Nike Pegasus Trail 5</li>
-                <li>Atasco</li>
-                <li>Pegasus Premium</li>
-                <li>V2K</li>
-                <li>NOCTA Glide</li>
-                <li>Zapatillas Air Max Sunder</li>
-                <li>Pulso Air Max</li>
-                <li>Impacto Air Max 4</li>
-                <li>Comando Air Max</li>
-                <li>Portal de Air Max</li>
-                <li>Zapatillas Air Max Terra 180</li>
-                <li>Zapatillas Air Max 270</li>
-                <li>Zapatillas Air Max 720</li>
-                <li>Verso de Air Max</li>
-                <li>Aire Max 1</li>
-                <li>Zapatillas Air Max Bliss</li>
-                <li>Zapatillas Air Max Alpha Trainer 5</li>
-                <li>Air Max Tailwind 1</li>
-                <li>Zapatillas Air VaporMax Plus TN</li>
-                <li>Zapatillas Air Max Plus Drift</li>
-                <li>Zapatillas Air VaporMax 2.0 2018</li>
-                <li>Zapatillas Air VaporMax 3.0 2019</li>
-                <li>Zapatillas Air VaporMax 2021</li>
-                <li>Zapatillas Air VaporMax 2023</li>
-                <li>Zapatillas Air VaporMax 360</li>
-            </ul>
-        </div>
-    </div>
-
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('.nike-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.classList.add('active');
-            }
+            alert("Navigating to section: " + sectionId);
         }
     </script>
 </body>
 </html>
+
+
