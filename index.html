@@ -3,67 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nike Options Menu</title>
+    <title>ZoneZN</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        .menu {
-            max-width: 300px;
-            margin: 50px auto;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .menu-header {
-            background: #111;
+        header {
+            background-color: #000;
             color: #fff;
-            padding: 15px;
             text-align: center;
-            font-size: 1.5em;
+            padding: 40px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .category {
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
             font-weight: bold;
-            border-radius: 8px 8px 0 0;
+            transition: background-color 0.3s;
         }
-        .menu-item {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-            transition: background 0.3s;
+        .category:hover {
+            background-color: #444;
         }
-        .menu-item:hover {
-            background: #f9f9f9;
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .sub-menu {
+        .nike-section {
             display: none;
-            background: #f7f7f7;
         }
-        .sub-menu .menu-item {
-            padding-left: 30px;
-            border-bottom: none;
+        .nike-section.active {
+            display: block;
+        }
+        .nike-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .nike-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .nike-section ul li {
+            margin-bottom: 8px;
+            font-size: 1em;
         }
     </style>
-    <script>
-        function toggleSubMenu() {
-            const subMenu = document.getElementById('sub-menu');
-            subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
 </head>
 <body>
-    <div class="menu">
-        <div class="menu-header" onclick="toggleSubMenu()">Nike</div>
-        <div class="sub-menu" id="sub-menu">
-            <div class="menu-item">NZtudio</div>
-            <div class="menu-item">ZoneNZ</div>
-            <div class="menu-item">NZtyle</div>
-            <div class="menu-item">SneakNZ</div>
-            <div class="menu-item">KicksNZ</div>
+    <header>
+        <h1>ZoneZN</h1>
+        <p>Las mejores zapatillas urbanas y deportivas</p>
+    </header>
+
+    <div class="categories">
+        <a href="#" class="category" onclick="showSection('futbol')">Fútbol</a>
+        <a href="#" class="category" onclick="showSection('airjordan')">Air Jordan</a>
+        <a href="#" class="category" onclick="showSection('nike')">Nike</a>
+        <a href="#" class="category" onclick="showSection('adidas')">Adidas</a>
+    </div>
+
+    <div class="container">
+        <!-- Sección Nike -->
+        <div id="nike" class="nike-section">
+            <h2>Nike</h2>
+            <ul>
+                <li>DIÉSEL X1</li>
+                <li>Pegasus aéreo 2K5</li>
+                <li>Nike Motiva</li>
+                <li>Nike Pegasus Trail 5</li>
+                <li>Atasco</li>
+                <li>Pegasus Premium</li>
+                <li>V2K</li>
+                <li>NOCTA Glide</li>
+                <li>Zapatillas Air Max Sunder</li>
+                <li>Pulso Air Max</li>
+                <li>Impacto Air Max 4</li>
+                <li>Comando Air Max</li>
+                <li>Portal de Air Max</li>
+                <li>Zapatillas Air Max Terra 180</li>
+                <li>Zapatillas Air Max 270</li>
+                <li>Zapatillas Air Max 720</li>
+                <li>Verso de Air Max</li>
+                <li>Aire Max 1</li>
+                <li>Zapatillas Air Max Bliss</li>
+                <li>Zapatillas Air Max Alpha Trainer 5</li>
+                <li>Air Max Tailwind 1</li>
+                <li>Zapatillas Air VaporMax Plus TN</li>
+                <li>Zapatillas Air Max Plus Drift</li>
+                <li>Zapatillas Air VaporMax 2.0 2018</li>
+                <li>Zapatillas Air VaporMax 3.0 2019</li>
+                <li>Zapatillas Air VaporMax 2021</li>
+                <li>Zapatillas Air VaporMax 2023</li>
+                <li>Zapatillas Air VaporMax 360</li>
+            </ul>
         </div>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.nike-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
 
